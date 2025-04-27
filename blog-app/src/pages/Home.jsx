@@ -3,7 +3,7 @@ import appwriteService from "../appwrite/config";
 import Container from "../components/container/Container";
 import PostCard from "../components/PostCard";
 import { useSelector } from "react-redux";
-import {motion} from 'motion/react'
+
 
 const Home = () => {
   const [Posts, setPosts] = useState([]);
@@ -14,6 +14,7 @@ const Home = () => {
       if (posts) {
         // the posts in itself has an object named as documents from where we're extracting the posts because posts has many documents like this
         setPosts(posts.documents);
+        console.log(posts.documents)
  
       }
     });

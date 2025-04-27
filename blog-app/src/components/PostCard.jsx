@@ -8,6 +8,7 @@ const PostCard = ({ $id, title, featuredImage, content }) => {
         ? appwriteService.getFilePreview(featuredImage)
         : 'https://www.svgrepo.com/show/508699/landscape-placeholder.svg';
 
+        console.log(imageUrl)
     return (
         <Link to={`/post/${$id}`} className="block">
             <div className="md:w-[20vw] w-[80vw] md:h-[50vh] h-[45vh] bg-gray-100 rounded-xl p-4 overflow-hidden flex flex-col shadow-lg transition-transform duration-300 hover:scale-105">
@@ -15,7 +16,7 @@ const PostCard = ({ $id, title, featuredImage, content }) => {
                 {/* Image Container */}
                 <div className="h-[40%] w-full flex-shrink-0">
                     <img
-                        src={imageUrl}
+                        src={imageUrl.href}
                         alt={title}
                         className="w-full h-full object-cover rounded-xl"
                     />

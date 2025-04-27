@@ -10,6 +10,10 @@ const TodoForm = () => {
     const add = (e) => {
       e.preventDefault()
       if(!todo) return
+      if(todo.trim() === '') {
+        settodo('')
+        return
+      }
       addTodo({todo, completed : false})
       settodo("")
     }

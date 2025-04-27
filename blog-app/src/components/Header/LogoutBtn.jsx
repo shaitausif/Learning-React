@@ -17,7 +17,6 @@ const LogoutBtn = () => {
       .logout()
       .then(() => {
         dispatch(logout());
-
         navigate("/login");
         dispatch(Loading(false));
       })

@@ -121,7 +121,7 @@ export class Service{
         return this.bucket.getFilePreview(
             conf.appwritebucketid,
             fileID
-        )     // The preview URL is stored in the `href` property
+        )   // The preview URL is stored in the `href` property
 
     }
 

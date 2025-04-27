@@ -14,7 +14,9 @@ const AllPosts = () => {
       if(posts){
         // the posts in itself has an object named as documents from where we're extracting the posts because posts has many documents like this
         setPosts(posts.documents)
+        console.log(posts.documents)   
       }
+     
     })
   },[])
   // I am going to handle the case if the Length of the Posts array is 0 that means there is not post in the Home Page
